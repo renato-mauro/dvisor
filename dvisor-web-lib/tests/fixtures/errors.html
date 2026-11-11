@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+<script type="module">
+    // Helpers for tests/dvisor-errors.spec.js. `?lib=` picks which copy of
+    // the library to load, so the init-failure test can point at the
+    // /tests/no-wasm/ alias (see tests/server.mjs) instead of /dist/.
+    const libUrl = new URLSearchParams(location.search).get('lib') || '/dist/index.js';
+    const lib = await import(libUrl);
+    window.Dvisor = lib.Dvisor;
+    window.DvisorError = lib.DvisorError;
+
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    window.describeError = (e) => ({
+        outcome: 'rejected',
+        isDvisorError: !!window.DvisorError && e instanceof window.DvisorError,
+        kind: e?.kind,
+        message: e?.message ?? String(e),
+    });
+
+    // Turns a promise that might never settle into a reportable outcome
+    // instead of letting the test hit its own 60 s timeout.
+    window.withTimeout = (promise, ms) =>
+        Promise.race([promise, sleep(ms).then(() => ({ outcome: 'timeout' }))]);
+
+    // Drains a query iterator and summarizes how it ended. `delayMs` starts
+    // consuming only after a pause (a consumer busy elsewhere), so whatever
+    // the workers answer meanwhile arrives with no next() pending — the case
+    // where errors used to be lost. `breakAfter` cancels after that many
+    // snapshots, through the for-await's implicit return().
+    window.settle = (iterable, { delayMs = 0, timeoutMs = 20_000, breakAfter = Infinity } = {}) =>
+        withTimeout((async () => {
+            if (delayMs) await sleep(delayMs);
+            let snapshots = 0;
+            let last = null;
+            try {
+                for await (const rows of iterable) {
+                    snapshots++;
+                    last = rows;
+                    if (snapshots >= breakAfter) break;
+                }
+                return { outcome: 'completed', snapshots, rows: last ? last.length : 0 };
+            } catch (e) {
+                return { ...describeError(e), snapshots };
+            }
+        })(), timeoutMs);
+
+    window.__ready = true;
+</script>
+</body>
+</html>

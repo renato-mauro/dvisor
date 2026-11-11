@@ -1,0 +1,6 @@
+.DS_Store
+
+# Build output
+dvisor-back/target/
+dvisor-web-lib/pkg/
+dvisor-web-lib/dist/

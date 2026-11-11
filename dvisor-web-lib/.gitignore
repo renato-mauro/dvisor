@@ -1,0 +1,6 @@
+node_modules/
+test-results/
+playwright-report/
+
+# Too large for git (over 200 MB): `npm test` downloads it, see scripts/fetch-test-data.mjs.
+tests/data/lineitem-sf1.*

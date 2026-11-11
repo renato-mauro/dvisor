@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+<script type="module">
+    import { Dvisor } from '/dist/index.js';
+
+    window.runQuery = async (query, tc = 4) => {
+        const dvisor = new Dvisor(tc);
+        let last = null;
+        for await (const chunk of dvisor.exec(query)) {
+            last = chunk;
+        }
+        return last;
+    };
+
+    window.runSql = async (sql, tc = 4) => {
+        const dvisor = new Dvisor(tc);
+        let last = null;
+        for await (const chunk of dvisor.execSql(sql)) {
+            last = chunk;
+        }
+        return last;
+    };
+
+    window.__ready = true;
+</script>
+</body>
+</html>

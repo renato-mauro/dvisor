@@ -1,0 +1,999 @@
+{
+ "two plain group columns, no ORDER BY": [
+  {
+   "region": 11,
+   "sex": 0,
+   "n": 31
+  },
+  {
+   "region": 11,
+   "sex": 1,
+   "n": 769
+  },
+  {
+   "region": 11,
+   "sex": 2,
+   "n": 700
+  },
+  {
+   "region": 12,
+   "sex": 0,
+   "n": 13
+  },
+  {
+   "region": 12,
+   "sex": 1,
+   "n": 846
+  },
+  {
+   "region": 12,
+   "sex": 2,
+   "n": 791
+  },
+  {
+   "region": 21,
+   "sex": 0,
+   "n": 30
+  },
+  {
+   "region": 21,
+   "sex": 1,
+   "n": 945
+  },
+  {
+   "region": 21,
+   "sex": 2,
+   "n": 825
+  },
+  {
+   "region": 22,
+   "sex": 0,
+   "n": 38
+  },
+  {
+   "region": 22,
+   "sex": 1,
+   "n": 1011
+  },
+  {
+   "region": 22,
+   "sex": 2,
+   "n": 901
+  },
+  {
+   "region": 31,
+   "sex": 0,
+   "n": 24
+  },
+  {
+   "region": 31,
+   "sex": 1,
+   "n": 1071
+  },
+  {
+   "region": 31,
+   "sex": 2,
+   "n": 1005
+  },
+  {
+   "region": 32,
+   "sex": 0,
+   "n": 11
+  },
+  {
+   "region": 32,
+   "sex": 1,
+   "n": 784
+  },
+  {
+   "region": 32,
+   "sex": 2,
+   "n": 705
+  }
+ ],
+ "two group columns, ORDER BY an aggregate": [
+  {
+   "region": 11,
+   "sex": 0,
+   "n": 31
+  },
+  {
+   "region": 11,
+   "sex": 1,
+   "n": 769
+  },
+  {
+   "region": 11,
+   "sex": 2,
+   "n": 700
+  },
+  {
+   "region": 12,
+   "sex": 0,
+   "n": 13
+  },
+  {
+   "region": 12,
+   "sex": 1,
+   "n": 846
+  },
+  {
+   "region": 12,
+   "sex": 2,
+   "n": 791
+  },
+  {
+   "region": 21,
+   "sex": 0,
+   "n": 30
+  },
+  {
+   "region": 21,
+   "sex": 1,
+   "n": 945
+  },
+  {
+   "region": 21,
+   "sex": 2,
+   "n": 825
+  },
+  {
+   "region": 22,
+   "sex": 0,
+   "n": 38
+  },
+  {
+   "region": 22,
+   "sex": 1,
+   "n": 1011
+  },
+  {
+   "region": 22,
+   "sex": 2,
+   "n": 901
+  },
+  {
+   "region": 31,
+   "sex": 0,
+   "n": 24
+  },
+  {
+   "region": 31,
+   "sex": 1,
+   "n": 1071
+  },
+  {
+   "region": 31,
+   "sex": 2,
+   "n": 1005
+  },
+  {
+   "region": 32,
+   "sex": 0,
+   "n": 11
+  },
+  {
+   "region": 32,
+   "sex": 1,
+   "n": 784
+  },
+  {
+   "region": 32,
+   "sex": 2,
+   "n": 705
+  }
+ ],
+ "ORDER BY only the first group column": [
+  {
+   "region": 11,
+   "sex": 0,
+   "n": 31
+  },
+  {
+   "region": 11,
+   "sex": 1,
+   "n": 769
+  },
+  {
+   "region": 11,
+   "sex": 2,
+   "n": 700
+  },
+  {
+   "region": 12,
+   "sex": 0,
+   "n": 13
+  },
+  {
+   "region": 12,
+   "sex": 1,
+   "n": 846
+  },
+  {
+   "region": 12,
+   "sex": 2,
+   "n": 791
+  },
+  {
+   "region": 21,
+   "sex": 0,
+   "n": 30
+  },
+  {
+   "region": 21,
+   "sex": 1,
+   "n": 945
+  },
+  {
+   "region": 21,
+   "sex": 2,
+   "n": 825
+  },
+  {
+   "region": 22,
+   "sex": 0,
+   "n": 38
+  },
+  {
+   "region": 22,
+   "sex": 1,
+   "n": 1011
+  },
+  {
+   "region": 22,
+   "sex": 2,
+   "n": 901
+  },
+  {
+   "region": 31,
+   "sex": 0,
+   "n": 24
+  },
+  {
+   "region": 31,
+   "sex": 1,
+   "n": 1071
+  },
+  {
+   "region": 31,
+   "sex": 2,
+   "n": 1005
+  },
+  {
+   "region": 32,
+   "sex": 0,
+   "n": 11
+  },
+  {
+   "region": 32,
+   "sex": 1,
+   "n": 784
+  },
+  {
+   "region": 32,
+   "sex": 2,
+   "n": 705
+  }
+ ],
+ "ORDER BY the group columns in reverse order": [
+  {
+   "region": 11,
+   "sex": 0,
+   "n": 31
+  },
+  {
+   "region": 11,
+   "sex": 1,
+   "n": 769
+  },
+  {
+   "region": 11,
+   "sex": 2,
+   "n": 700
+  },
+  {
+   "region": 12,
+   "sex": 0,
+   "n": 13
+  },
+  {
+   "region": 12,
+   "sex": 1,
+   "n": 846
+  },
+  {
+   "region": 12,
+   "sex": 2,
+   "n": 791
+  },
+  {
+   "region": 21,
+   "sex": 0,
+   "n": 30
+  },
+  {
+   "region": 21,
+   "sex": 1,
+   "n": 945
+  },
+  {
+   "region": 21,
+   "sex": 2,
+   "n": 825
+  },
+  {
+   "region": 22,
+   "sex": 0,
+   "n": 38
+  },
+  {
+   "region": 22,
+   "sex": 1,
+   "n": 1011
+  },
+  {
+   "region": 22,
+   "sex": 2,
+   "n": 901
+  },
+  {
+   "region": 31,
+   "sex": 0,
+   "n": 24
+  },
+  {
+   "region": 31,
+   "sex": 1,
+   "n": 1071
+  },
+  {
+   "region": 31,
+   "sex": 2,
+   "n": 1005
+  },
+  {
+   "region": 32,
+   "sex": 0,
+   "n": 11
+  },
+  {
+   "region": 32,
+   "sex": 1,
+   "n": 784
+  },
+  {
+   "region": 32,
+   "sex": 2,
+   "n": 705
+  }
+ ],
+ "renamed plain group column, not the first": [
+  {
+   "yr": 2018,
+   "gender": 0,
+   "n": 36
+  },
+  {
+   "yr": 2018,
+   "gender": 1,
+   "n": 1226
+  },
+  {
+   "yr": 2018,
+   "gender": 2,
+   "n": 1138
+  },
+  {
+   "yr": 2019,
+   "gender": 0,
+   "n": 41
+  },
+  {
+   "yr": 2019,
+   "gender": 1,
+   "n": 1325
+  },
+  {
+   "yr": 2019,
+   "gender": 2,
+   "n": 1184
+  },
+  {
+   "yr": 2020,
+   "gender": 0,
+   "n": 37
+  },
+  {
+   "yr": 2020,
+   "gender": 1,
+   "n": 1395
+  },
+  {
+   "yr": 2020,
+   "gender": 2,
+   "n": 1268
+  },
+  {
+   "yr": 2021,
+   "gender": 0,
+   "n": 33
+  },
+  {
+   "yr": 2021,
+   "gender": 1,
+   "n": 1480
+  },
+  {
+   "yr": 2021,
+   "gender": 2,
+   "n": 1337
+  }
+ ],
+ "single renamed group column, not the first": [
+  {
+   "n": 147,
+   "gender": 0
+  },
+  {
+   "n": 5426,
+   "gender": 1
+  },
+  {
+   "n": 4927,
+   "gender": 2
+  }
+ ],
+ "calculated and plain group columns, DESC": [
+  {
+   "yr": 2018,
+   "flag": "A",
+   "w": 2702.355450236967,
+   "n": 633
+  },
+  {
+   "yr": 2019,
+   "flag": "C",
+   "w": 2698.506920415225,
+   "n": 1156
+  },
+  {
+   "yr": 2020,
+   "flag": "A",
+   "w": 2767.5857487922704,
+   "n": 828
+  },
+  {
+   "yr": 2019,
+   "flag": "B",
+   "w": 2683.7900912646674,
+   "n": 767
+  },
+  {
+   "yr": 2021,
+   "flag": "B",
+   "w": 2703.609351432881,
+   "n": 663
+  },
+  {
+   "yr": 2021,
+   "flag": "C",
+   "w": 2773.1024279210924,
+   "n": 1318
+  },
+  {
+   "yr": 2018,
+   "flag": "C",
+   "w": 2712.880733944954,
+   "n": 981
+  },
+  {
+   "yr": 2020,
+   "flag": "C",
+   "w": 2755.5389170896783,
+   "n": 1182
+  },
+  {
+   "yr": 2019,
+   "flag": "A",
+   "w": 2721.974481658692,
+   "n": 627
+  },
+  {
+   "yr": 2018,
+   "flag": "B",
+   "w": 2774.944020356234,
+   "n": 786
+  },
+  {
+   "yr": 2020,
+   "flag": "B",
+   "w": 2806.550724637681,
+   "n": 690
+  },
+  {
+   "yr": 2021,
+   "flag": "A",
+   "w": 2719.452243958573,
+   "n": 869
+  }
+ ],
+ "three group columns": [
+  {
+   "region": 31,
+   "flag": "C",
+   "sex": 1,
+   "n": 529
+  },
+  {
+   "region": 12,
+   "flag": "A",
+   "sex": 0,
+   "n": 6
+  },
+  {
+   "region": 22,
+   "flag": "B",
+   "sex": 1,
+   "n": 338
+  },
+  {
+   "region": 12,
+   "flag": "B",
+   "sex": 1,
+   "n": 283
+  },
+  {
+   "region": 32,
+   "flag": "C",
+   "sex": 1,
+   "n": 784
+  },
+  {
+   "region": 11,
+   "flag": "A",
+   "sex": 2,
+   "n": 319
+  },
+  {
+   "region": 21,
+   "flag": "C",
+   "sex": 1,
+   "n": 475
+  },
+  {
+   "region": 21,
+   "flag": "B",
+   "sex": 2,
+   "n": 420
+  },
+  {
+   "region": 22,
+   "flag": "A",
+   "sex": 2,
+   "n": 305
+  },
+  {
+   "region": 22,
+   "flag": "C",
+   "sex": 1,
+   "n": 348
+  },
+  {
+   "region": 21,
+   "flag": "B",
+   "sex": 0,
+   "n": 17
+  },
+  {
+   "region": 11,
+   "flag": "A",
+   "sex": 0,
+   "n": 18
+  },
+  {
+   "region": 22,
+   "flag": "A",
+   "sex": 0,
+   "n": 7
+  },
+  {
+   "region": 12,
+   "flag": "A",
+   "sex": 1,
+   "n": 261
+  },
+  {
+   "region": 12,
+   "flag": "C",
+   "sex": 2,
+   "n": 248
+  },
+  {
+   "region": 31,
+   "flag": "A",
+   "sex": 2,
+   "n": 533
+  },
+  {
+   "region": 31,
+   "flag": "C",
+   "sex": 0,
+   "n": 12
+  },
+  {
+   "region": 11,
+   "flag": "B",
+   "sex": 2,
+   "n": 381
+  },
+  {
+   "region": 22,
+   "flag": "B",
+   "sex": 0,
+   "n": 17
+  },
+  {
+   "region": 12,
+   "flag": "B",
+   "sex": 2,
+   "n": 282
+  },
+  {
+   "region": 32,
+   "flag": "C",
+   "sex": 2,
+   "n": 705
+  },
+  {
+   "region": 11,
+   "flag": "A",
+   "sex": 1,
+   "n": 368
+  },
+  {
+   "region": 21,
+   "flag": "C",
+   "sex": 2,
+   "n": 405
+  },
+  {
+   "region": 21,
+   "flag": "B",
+   "sex": 1,
+   "n": 470
+  },
+  {
+   "region": 22,
+   "flag": "A",
+   "sex": 1,
+   "n": 325
+  },
+  {
+   "region": 22,
+   "flag": "C",
+   "sex": 2,
+   "n": 317
+  },
+  {
+   "region": 31,
+   "flag": "C",
+   "sex": 2,
+   "n": 472
+  },
+  {
+   "region": 31,
+   "flag": "A",
+   "sex": 0,
+   "n": 12
+  },
+  {
+   "region": 12,
+   "flag": "C",
+   "sex": 0,
+   "n": 2
+  },
+  {
+   "region": 11,
+   "flag": "B",
+   "sex": 0,
+   "n": 13
+  },
+  {
+   "region": 22,
+   "flag": "B",
+   "sex": 2,
+   "n": 279
+  },
+  {
+   "region": 32,
+   "flag": "C",
+   "sex": 0,
+   "n": 11
+  },
+  {
+   "region": 21,
+   "flag": "C",
+   "sex": 0,
+   "n": 13
+  },
+  {
+   "region": 12,
+   "flag": "B",
+   "sex": 0,
+   "n": 5
+  },
+  {
+   "region": 22,
+   "flag": "C",
+   "sex": 0,
+   "n": 14
+  },
+  {
+   "region": 12,
+   "flag": "C",
+   "sex": 1,
+   "n": 302
+  },
+  {
+   "region": 12,
+   "flag": "A",
+   "sex": 2,
+   "n": 261
+  },
+  {
+   "region": 31,
+   "flag": "A",
+   "sex": 1,
+   "n": 542
+  },
+  {
+   "region": 11,
+   "flag": "B",
+   "sex": 1,
+   "n": 401
+  }
+ ],
+ "sum of a narrow integer column": [
+  {
+   "region": 11,
+   "total": 4113376,
+   "n": 1500
+  },
+  {
+   "region": 12,
+   "total": 4473789,
+   "n": 1650
+  },
+  {
+   "region": 21,
+   "total": 4967683,
+   "n": 1800
+  },
+  {
+   "region": 22,
+   "total": 5370024,
+   "n": 1950
+  },
+  {
+   "region": 31,
+   "total": 5671994,
+   "n": 2100
+  },
+  {
+   "region": 32,
+   "total": 4136560,
+   "n": 1500
+  }
+ ],
+ "sum and average of an integer column, no group columns": [
+  {
+   "total": 28733426,
+   "w": 2736.516761904762,
+   "n": 10500
+  }
+ ],
+ "min and max of a date": [
+  {
+   "d0": "2018-01-01",
+   "d1": "2021-12-31",
+   "n": 10500
+  }
+ ],
+ "min and max of a date, by group": [
+  {
+   "region": 11,
+   "d0": "2018-01-01",
+   "d1": "2021-12-31",
+   "n": 1500
+  },
+  {
+   "region": 12,
+   "d0": "2018-01-01",
+   "d1": "2021-12-31",
+   "n": 1650
+  },
+  {
+   "region": 21,
+   "d0": "2018-01-01",
+   "d1": "2021-12-31",
+   "n": 1800
+  },
+  {
+   "region": 22,
+   "d0": "2018-01-01",
+   "d1": "2021-12-31",
+   "n": 1950
+  },
+  {
+   "region": 31,
+   "d0": "2018-01-03",
+   "d1": "2021-12-31",
+   "n": 2100
+  },
+  {
+   "region": 32,
+   "d0": "2018-01-02",
+   "d1": "2021-12-31",
+   "n": 1500
+  }
+ ],
+ "JSON DSL: two group columns, sorted by an aggregate": [
+  {
+   "region": 12,
+   "flag": "B",
+   "n": 570
+  },
+  {
+   "region": 31,
+   "flag": "C",
+   "n": 1013
+  },
+  {
+   "region": 11,
+   "flag": "B",
+   "n": 795
+  },
+  {
+   "region": 21,
+   "flag": "B",
+   "n": 907
+  },
+  {
+   "region": 31,
+   "flag": "A",
+   "n": 1087
+  },
+  {
+   "region": 11,
+   "flag": "A",
+   "n": 705
+  },
+  {
+   "region": 32,
+   "flag": "C",
+   "n": 1500
+  },
+  {
+   "region": 12,
+   "flag": "C",
+   "n": 552
+  },
+  {
+   "region": 22,
+   "flag": "C",
+   "n": 679
+  },
+  {
+   "region": 21,
+   "flag": "C",
+   "n": 893
+  },
+  {
+   "region": 12,
+   "flag": "A",
+   "n": 528
+  },
+  {
+   "region": 22,
+   "flag": "B",
+   "n": 634
+  },
+  {
+   "region": 22,
+   "flag": "A",
+   "n": 637
+  }
+ ],
+ "lineitem: two plain group columns, no ORDER BY": [
+  {
+   "l_returnflag": "R",
+   "l_linestatus": "F",
+   "n": 1478870
+  },
+  {
+   "l_returnflag": "A",
+   "l_linestatus": "F",
+   "n": 1478493
+  },
+  {
+   "l_returnflag": "N",
+   "l_linestatus": "O",
+   "n": 3004998
+  },
+  {
+   "l_returnflag": "N",
+   "l_linestatus": "F",
+   "n": 38854
+  }
+ ],
+ "lineitem: two group columns, ORDER BY an aggregate": [
+  {
+   "l_returnflag": "A",
+   "l_linestatus": "F",
+   "n": 1478493
+  },
+  {
+   "l_returnflag": "N",
+   "l_linestatus": "F",
+   "n": 38854
+  },
+  {
+   "l_returnflag": "R",
+   "l_linestatus": "F",
+   "n": 1478870
+  },
+  {
+   "l_returnflag": "N",
+   "l_linestatus": "O",
+   "n": 3004998
+  }
+ ],
+ "lineitem: sums and averages of decimal columns": [
+  {
+   "l_returnflag": "R",
+   "l_linestatus": "F",
+   "qty": 37719753,
+   "price": 56568041380.9,
+   "disc": 0.05000940583012706,
+   "n": 1478870
+  },
+  {
+   "l_returnflag": "A",
+   "l_linestatus": "F",
+   "qty": 37734107,
+   "price": 56586554400.73,
+   "disc": 0.049985295838397614,
+   "n": 1478493
+  },
+  {
+   "l_returnflag": "N",
+   "l_linestatus": "O",
+   "qty": 76633518,
+   "price": 114935210409.19,
+   "disc": 0.05000025956756044,
+   "n": 3004998
+  },
+  {
+   "l_returnflag": "N",
+   "l_linestatus": "F",
+   "qty": 991417,
+   "price": 1487504710.38,
+   "disc": 0.0500934266742163,
+   "n": 38854
+  }
+ ],
+ "lineitem: equality filter on a decimal column": [
+  {
+   "l_returnflag": "R",
+   "n": 134550
+  },
+  {
+   "l_returnflag": "A",
+   "n": 135256
+  },
+  {
+   "l_returnflag": "N",
+   "n": 276589
+  }
+ ]
+}

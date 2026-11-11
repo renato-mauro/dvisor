@@ -1,0 +1,42 @@
+{
+    "name": "dvisor",
+    "version": "1.0.0",
+    "description": "Progressive query engine for the browser: SQL over remote Parquet files, with no backend server.",
+    "keywords": ["parquet", "sql", "progressive", "query-engine", "webassembly", "wasm", "visualization", "browser"],
+    "homepage": "https://dvisor.io",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/renato-mauro/dvisor.git",
+        "directory": "dvisor-web-lib"
+    },
+    "bugs": {
+        "url": "https://github.com/renato-mauro/dvisor/issues"
+    },
+    "author": "Renato Mauro",
+    "license": "Apache-2.0",
+    "type": "module",
+    "module": "./dist/index.js",
+    "main": "./dist/index.js",
+    "files": [
+        "dist",
+        "NOTICE"
+    ],
+    "exports": {
+        ".": {
+            "import": "./dist/index.js"
+        }
+    },
+    "scripts": {
+        "build": "rollup -c",
+        "test-data": "node scripts/fetch-test-data.mjs",
+        "pretest": "npm run test-data && npm run build",
+        "test": "playwright test",
+        "check:cdn": "node scripts/check-cdn.mjs",
+        "prepublishOnly": "npm test"
+    },
+    "devDependencies": {
+        "@playwright/test": "^1.48.0",
+        "@rollup/plugin-terser": "^0.4.4",
+        "rollup": "^4.0.0"
+    }
+}

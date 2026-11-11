@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+<script type="module">
+    // Helpers for tests/dvisor-grouping.spec.js.
+    import { Dvisor, DvisorError } from '/dist/index.js';
+
+    const dv = new Dvisor(4);
+    const fmt = (v) => (v instanceof Date ? v.toISOString().slice(0, 10) : v);
+
+    // Runs a query to the end and reports its final rows, plus any snapshot
+    // that broke the merge invariants: a group listed twice, or a count that
+    // went down from one snapshot to the next. The row values are copied out
+    // of each snapshot, which the library reuses.
+    window.runChecked = async (query, keys) => {
+        const counts = new Map();
+        const problems = [];
+        let snapshots = 0;
+        let rows = [];
+        try {
+            const iterable = typeof query === 'string' ? dv.execSql(query) : dv.exec(query);
+            for await (const snapshot of iterable) {
+                snapshots++;
+                const seen = new Set();
+                for (const row of snapshot) {
+                    const key = JSON.stringify(keys.map((k) => fmt(row[k])));
+                    if (seen.has(key)) problems.push(`snapshot ${snapshots}: group ${key} listed twice`);
+                    seen.add(key);
+                    if (typeof row.n === 'number') {
+                        if (counts.has(key) && row.n < counts.get(key)) {
+                            problems.push(`snapshot ${snapshots}: count of group ${key} went down`);
+                        }
+                        counts.set(key, row.n);
+                    }
+                }
+                rows = snapshot.map((row) => Object.fromEntries(Object.entries(row).map(([k, v]) => [k, fmt(v)])));
+            }
+            return { rows, snapshots, problems };
+        } catch (e) {
+            return { error: e instanceof DvisorError ? `${e.kind}: ${e.message}` : String(e) };
+        }
+    };
+
+    window.__ready = true;
+</script>
+</body>
+</html>
