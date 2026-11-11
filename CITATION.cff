@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use dvisor, please cite it using the metadata below."
+title: "dvisor: a progressive query engine for the browser"
+type: software
+version: 1.0.0
+date-released: 2026-11-11
+license: Apache-2.0
+repository-code: "https://github.com/renato-mauro/dvisor"
+url: "https://dvisor.io"
+abstract: >-
+  dvisor (Data Visualization Optimized Retrieval) is a progressive query
+  engine that runs in the browser. It runs SQL queries against remote Parquet
+  files with no backend server, and streams partial results as they arrive.
+  The engine is written in Rust and compiled to WebAssembly.
+keywords:
+  - parquet
+  - sql
+  - query engine
+  - progressive visual analytics
+  - webassembly
+  - data visualization
+authors:
+  - family-names: Mauro
+    given-names: Renato
+    orcid: "https://orcid.org/0000-0002-4363-499X"
+  - family-names: Ogasawara
+    given-names: Eduardo
+    orcid: "https://orcid.org/0000-0002-0466-0626"
+  - family-names: Esperança
+    given-names: Claudio
+    orcid: "https://orcid.org/0000-0002-4942-3624"
