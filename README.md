@@ -1,5 +1,11 @@
 # dvisor
 
+[![DOI](https://zenodo.org/badge/1454510738.svg)](https://doi.org/10.5281/zenodo.24148060)
+[![npm](https://img.shields.io/npm/v/dvisor)](https://www.npmjs.com/package/dvisor)
+[![License](https://img.shields.io/github/license/renato-mauro/dvisor)](LICENSE)
+[![Docs](https://img.shields.io/badge/docs-dvisor.io-blue)](https://dvisor.io)
+
+
 dvisor (Data Visualization Optimized Retrieval) is a progressive query engine
 that runs in the browser. It runs SQL queries against remote Parquet
 files with no backend server, and streams partial results as they arrive.
