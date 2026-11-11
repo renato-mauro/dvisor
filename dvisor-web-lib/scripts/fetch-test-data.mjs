@@ -4,7 +4,7 @@ import { createWriteStream, existsSync, renameSync } from 'node:fs';
 import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 
-const SOURCE = 'https://storage.googleapis.com/dvisor/tpch';
+const SOURCE = 'https://data.dvisor.io/data/tpch';
 const FILES = ['lineitem-sf1.parquet', 'lineitem-sf1.meta.json'];
 const dir = new URL('../tests/data/', import.meta.url);
 

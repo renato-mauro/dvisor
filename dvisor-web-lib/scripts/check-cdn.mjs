@@ -14,7 +14,7 @@ const bases = arg?.startsWith('http')
     ? [arg.replace(/\/$/, '')]
     : [`https://cdn.jsdelivr.net/npm/${name}@${arg || version}/dist`, `https://unpkg.com/${name}@${arg || version}/dist`];
 
-const SQL = `SELECT count() AS n FROM 'https://storage.googleapis.com/dvisor/grouped.parquet'`;
+const SQL = `SELECT count() AS n FROM 'https://data.dvisor.io/data/tpch/lineitem-sf1.parquet'`;
 const PAGE = 'http://cdn-check.test/';
 
 const browser = await chromium.launch();

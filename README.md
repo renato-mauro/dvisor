@@ -15,7 +15,7 @@ Documentation, guides and live examples: **[dvisor.io](https://dvisor.io)**
   const dv = new Dvisor();
   const sql = `
     SELECT year(DTNASC) AS birth_year, count() AS births
-    FROM 'https://storage.googleapis.com/dvisor/SINASC-2012-2021.parquet'
+    FROM 'https://data.dvisor.io/data/datasus/SINASC-2012-2021.parquet'
     GROUP BY 1
     ORDER BY birth_year`;
 
