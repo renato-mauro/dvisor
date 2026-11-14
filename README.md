@@ -46,22 +46,61 @@ requests, and a `.meta.json` file with its statistics sits next to it. The
 
 ## Building
 
-Requires Rust, [wasm-pack](https://rustwasm.github.io/wasm-pack/) and Node.js.
+The build runs on macOS, Linux and Windows. It needs a C toolchain, Rust
+(installed with rustup) with its WebAssembly target,
+[wasm-pack](https://wasm-bindgen.github.io/wasm-pack/) and Node.js 20 or
+later.
+
+**macOS**
 
 ```bash
-cd dvisor-web-lib && npm install
-cd ../dvisor-back && ./compile.sh   # engine -> dvisor-web-lib/pkg, then the library -> dvisor-web-lib/dist
+xcode-select --install                                           # C toolchain and git
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh   # Rust
+brew install node                                                # or the installer at nodejs.org
 ```
 
-Tests:
+**Linux**, and Windows with WSL
 
 ```bash
-cd dvisor-back && cargo test
-cd dvisor-web-lib && npx playwright install chromium && npm test
+sudo apt install build-essential curl git                        # Debian, Ubuntu; Fedora: sudo dnf install gcc curl git
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh   # Rust
 ```
 
-The first `npm test` downloads a 200 MB TPC-H test file. Publishing a
-release: see [RELEASING.md](RELEASING.md).
+Node.js: see [nodejs.org](https://nodejs.org/en/download); distribution
+packages may be older than 20.
+
+**Windows**
+
+Install [Git for Windows](https://git-scm.com/downloads/win), which brings
+Git Bash; Rust, running `rustup-init.exe` from [rustup.rs](https://rustup.rs)
+and accepting the Visual Studio C++ Build Tools it offers; and Node.js, from
+[nodejs.org](https://nodejs.org). Run the commands below in Git Bash.
+
+**Then, on all three**, in a new terminal:
+
+```bash
+rustup target add wasm32-unknown-unknown
+cargo install wasm-pack
+git clone https://github.com/renato-mauro/dvisor.git
+cd dvisor/dvisor-back && ./compile.sh
+```
+
+`compile.sh` checks these prerequisites first and says how to install any
+that is missing. It builds the engine into `dvisor-web-lib/pkg` and the
+library into `dvisor-web-lib/dist`. The first run also installs the
+library's npm dependencies and downloads the Rust crates and the tools
+wasm-pack uses, so it takes a few minutes.
+
+Tests, from `dvisor-back`:
+
+```bash
+cargo test
+cd ../dvisor-web-lib && npx playwright install chromium && npm test
+```
+
+On Linux, `npx playwright install --with-deps chromium` also installs the
+system libraries Chromium needs. The first `npm test` downloads a 200 MB
+TPC-H test file. Publishing a release: see [RELEASING.md](RELEASING.md).
 
 ## Documentation
 
